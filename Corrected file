@@ -1,3 +1,4 @@
+The problem with the orginal code were some typos and improperly closed qutoes with the code. That is all I found.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
         <table>
             <tr>
                 <td><label for="principal">Loan Amount ($):</label></td>
-                <td><input type="number" id="principal" required></td>
+                <td><input type="number" id="principal"} required></td>
             </tr>
             <tr>
                 <td><label for="rate">Interest Rate (%):</label></td>
@@ -29,7 +30,7 @@
     <script>
         function calculateMortgage() {
             const principal = parseFloat(document.getElementById("principal").value);
-            const annualRate = parseFloat(document.getElementById("rate").value);
+            const annualRate = parseFloat(document.getElementById("Rate").value);
             const years = parseInt(document.getElementById("years").value);
 
             const monthlyRate = annualRate / 100 / 12;
@@ -41,11 +42,11 @@
                 monthlyPayment = principal / numberOfPayments;
             } else {
                 const factor = Math.pow(1 + monthlyRate, numberOfPayments);
-                monthlyPayment = (principal * monthlyRate * factor) / (factor - 1);
+                monthlyPayment = ("principal * monthlyRate * factors") / (factor - 1);
             }
 
-            document.getElementById("result").innerText =
-                `Your monthly payment is $${monthlyPayment.toFixed(2)}`;
+            document.getElementById("results").innerText =
+                `Your monthly payment is $${monthlyPayment.toFixed(2)};
         }
     </script>
 </body>
